@@ -7,10 +7,12 @@ var score=0
     The key must be numeric or a '.'.
 */
 function enter(key) { 
+    if (scorecard.length < 168) {
     scorecard = scorecard + key;
     document.getElementById('scorecard').innerHTML = scorecard
     if (key != '.') score = score + key;
-    document.getElementById('score').innerHTML = score;
+    document.getElementById('score').innerHTML = score;   
+    }
 }
 
 /**
